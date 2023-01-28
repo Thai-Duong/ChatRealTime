@@ -1,7 +1,20 @@
 import { Avatar, Typography } from "antd";
+import { formatRelative } from "date-fns";
 import React from "react";
 
 const Message = ({ text, displayName, createAt, photoURL }) => {
+  function formatDate(seconds) {
+    let formattedDate = "";
+
+    if (seconds) {
+      formattedDate = formatRelative(new Date(seconds * 1000), new Date());
+
+      formattedDate =
+        formattedDate.charAt(0).toUpperCase() + formattedDate.slice(1);
+    }
+
+    return formattedDate;
+  }
   return (
     <div className="mb-2">
       <div>
@@ -10,7 +23,7 @@ const Message = ({ text, displayName, createAt, photoURL }) => {
           {displayName}
         </Typography.Text>
         <Typography.Text className="ml-5 text-[15px] ">
-          {createAt}
+          {formatDate(createAt?.seconds)}
         </Typography.Text>
       </div>
       <div className="">

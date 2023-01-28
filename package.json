@@ -9,7 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^5.0.5",
     "date-fns": "^2.29.3",
-    "firebase": "^9.15.0",
+    "firebase": "^8.10.0",
     "i": "^0.3.7",
     "lodash": "^4.17.21",
     "npm": "^9.2.0",

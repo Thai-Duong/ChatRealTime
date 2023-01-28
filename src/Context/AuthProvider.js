@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { useHistory, useNavigate } from "react-router-dom";
-import { auth } from "../firebase/config";
 import { Spin } from "antd";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase/config";
 
 export const AuthContext = React.createContext();
 
